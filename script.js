@@ -20,7 +20,6 @@ function changeScore() {
 
 function startGame() {
   const correctBall = Math.floor(Math.random() * 6);
-  console.log(correctBall);
   for (let i = 0; i < balls.length; i += 1) {
     balls[i].style.backgroundColor = randomRGB();
 
@@ -39,7 +38,6 @@ function selectBall(el) {
   const ballColor = getComputedStyle(el.target).backgroundColor;
   if (ballColor === color.innerText) {
     answer.innerText = 'Acertou!';
-    resetGame();
     changeScore();
   } else {
     answer.innerText = 'Errou! Tente novamente!';
